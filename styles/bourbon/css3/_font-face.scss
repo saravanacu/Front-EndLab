@@ -1,0 +1,38 @@
+@mixin font-face(
+  $font-family,
+  $file-path,
+  $weight: normal,
+  $style: normal,
+  $asset-pipeline: $asset-pipeline,
+  $file-formats: eot woff2 woff ttf svg) {
+
+  $user-deprecation-warnings-setting: $output-bourbon-deprecation-warnings;
+  $output-bourbon-deprecation-warnings: false !global;
+
+  $font-url-prefix: font-url-prefixer($asset-pipeline);
+
+  @font-face {
+    font-family: $font-family;
+    font-style: $style;
+    font-weight: $weight;
+
+    src: font-source-declaration(
+      $font-family,
+      $file-path,
+      $asset-pipeline,
+      $file-formats,
+      $font-url-prefix
+    );
+  }
+
+  $output-bourbon-deprecation-warnings: $user-deprecation-warnings-setting !global;
+}
+
+@include font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Libre Franklin'), local('LibreFranklin-Regular'), url(https://fonts.gstatic.com/s/librefranklin/v1/PFwjf3aDdAQPvNKUrT3U7xHoxYlEhdfxgPTmEO-jGTc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+

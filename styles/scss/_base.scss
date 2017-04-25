@@ -2,4 +2,5 @@ $color-bg: #ff0000;
 
 body {
   background-color: $color-bg;
+  @include libra-franklin-bold;
 }
