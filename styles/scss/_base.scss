@@ -2,16 +2,23 @@
 $color-primary: #7E57C2;
 $color-text: #333333; 
 $color-bg: #FF0000;
-$button-type-one: #6255FF;   //5c50e6 On Hover
-$button-type-two: #3ECF8E;   //3cbe84 On Hover
-$button-type-three: #FFFFFF; //f1f0ff On Hover
 
 //Typography
 $base-font-size: 16px/24px;
 $base-font-family: 'Libra franklin', Arial, Sans-serif; 
+
+//Mixins 
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
 
 body {
   background-color: $color-bg;
   font-family:  $base-font-family;
   font-size:    $base-font-size;
 }
+
