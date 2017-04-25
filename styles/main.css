@@ -371,6 +371,35 @@ template {
 
 /* all fonts related to the application need to be added in this scss file*/
 body {
-  background-color: #ff0000; }
+  background-color: #FF0000;
+  font-family: "Libra franklin", Arial, Sans-serif;
+  font-size: 0.66667; }
+
+.btn {
+  border: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  min-width: 115px;
+  text-align: center; }
+
+.btn-default {
+  background-color: #6255FF;
+  color: #FFFFFF; }
+  .btn-default:hover {
+    background-color: #5b4fe6; }
+
+.btn-primary {
+  background-color: #3ECF8E;
+  color: #FFFFFF; }
+  .btn-primary:hover {
+    background-color: #4da17c; }
+
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: #6255FF; }
+  .btn-secondary:hover {
+    background-color: #f0f0f0; }
 
 /*# sourceMappingURL=main.css.map */

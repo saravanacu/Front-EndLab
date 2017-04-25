@@ -1,5 +1,24 @@
-$color-bg: #ff0000; 
+// Color Definitions:
+$color-primary: #7E57C2;
+$color-text: #333333; 
+$color-bg: #FF0000;
+
+//Typography
+$base-font-size: 16px/24px;
+$base-font-family: 'Libra franklin', Arial, Sans-serif; 
+
+//Mixins 
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
 
 body {
   background-color: $color-bg;
+  font-family:  $base-font-family;
+  font-size:    $base-font-size;
 }
+
