@@ -1,3 +1,6 @@
+// $asset-pipeline: true;
+// $output-bourbon-deprecation-warnings: false;
+@import '../bourbon/bourbon';
 @import 'normalize';
 @import 'fonts';
 @import 'base';
@@ -5,4 +8,3 @@
 @import 'form';
 @import 'buttons';
 @import 'icons';
-@import '../bourbon/css3/font-face';
