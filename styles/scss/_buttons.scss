@@ -8,13 +8,24 @@ $button-bg-typethree-hover: darken(desaturate($button-bg-typethree,25),6);
 $button-text-light: #FFFFFF;
 $button-text-dark: #6255FF;
 
-.btn {
+#{$all-buttons} {
+  font-family: $georgia;
   border: 0;
   @include border-radius(5px);
-  min-width: 115px;
+  min-width: 160px;
+  line-height: 40px;
   text-align: center;
 }
+
+// #{$all-buttons-focus},
+// #{$all-buttons-hover} {
+// }
+
+// #{$all-buttons-active} {
+// }
+
 .btn-default {
+
   background-color: $button-bg-typeone;
   color: $button-text-light;
   &:hover {
