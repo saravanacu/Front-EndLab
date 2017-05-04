@@ -1,0 +1,36 @@
+$browser-context: 16;
+// Function to convert pixels to em
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+h1 {
+  font-size: em(47);
+  line-height: em(48);
+}
+h2 {
+  font-size: em(29);
+  line-height: em(32);
+}
+h3 {
+  font-size: em(21);
+  line-height: em(24);
+}
+h4 {
+  font-size: em(18);
+  line-height: em(24);
+}
+h5 {
+  font-size: em(16);
+  line-height: em(24);
+}
+h6 {
+  font-size: em(14);
+  line-height: em(24);
+}
+p {
+  font-size: em(16);
+  line-height: em(24);
+}
+blockquote {
+  @include primary-light;
+}
