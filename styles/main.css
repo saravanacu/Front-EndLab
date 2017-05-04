@@ -373,15 +373,17 @@ template {
 body {
   background-color: #FF0000;
   font-family: "Libra franklin", Arial, Sans-serif;
-  font-size: 0.66667; }
+  font-size: 0.58333; }
 
-.btn {
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
   border: 0;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
-  min-width: 115px;
+  min-width: 160px;
+  line-height: 40px;
   text-align: center; }
 
 .btn-default {
