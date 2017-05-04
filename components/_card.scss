@@ -1,0 +1,19 @@
+$card-bg-color:       #fff;
+$card-border-color:   #eee;
+$card-border-radius:   8px;
+$card-border-size:     1px;
+$card-border-style:  solid;
+
+.card {
+  background-color: $card-bg-color;
+  height: 376px;
+  width:  260px;
+  //Custom Mixin
+  @include border-radius($card-border-radius);
+  //From Bourbon
+  @include border-style($card-border-style);
+  @include border-color($card-border-color);
+  @include border-width($card-border-size);
+}
+
+

@@ -4,11 +4,10 @@ $color-text: #333333;
 $color-bg: #FF0000;
 
 //Typography
-$base-font-size: 14px/24px;
+$base-font-size: 14px/1.5;
 $base-font-family: 'Libra franklin', Arial, Sans-serif; 
 
-//Mixins 
-
+//Custom Mixins 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
@@ -21,4 +20,3 @@ body {
   font-family:  $base-font-family;
   font-size:    $base-font-size;
 }
-

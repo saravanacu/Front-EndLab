@@ -373,7 +373,7 @@ template {
 body {
   background-color: #FF0000;
   font-family: "Libra franklin", Arial, Sans-serif;
-  font-size: 0.58333; }
+  font-size: 9.33333px; }
 
 button, input[type="button"], input[type="reset"], input[type="submit"] {
   font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
@@ -403,5 +403,17 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   color: #6255FF; }
   .btn-secondary:hover {
     background-color: #f0f0f0; }
+
+.card {
+  background-color: #fff;
+  height: 376px;
+  width: 260px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: #eee;
+  border-width: 1px; }
 
 /*# sourceMappingURL=main.css.map */
