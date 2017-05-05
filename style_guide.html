@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>sample</title>
+  <link rel="stylesheet" type="text/css" href="./styles/main.css">
+</head>
+<body>
+  <form class="form" style="margin-bottom:10px;">
+    <div class="form__field">
+      <label class="form__label"></label>
+      <input class="form__input" type="text" placeholder="Placeholder"> 
+      <p class="form__text">This is the help-text.</p>
+    </div>
+    <div class="form__field is-error">
+      <label class="form__label"></label>
+      <input class="form__input" type="text" placeholder="Placeholder"> 
+      <p class="form__errormsg">Describe the error here.</p>
+    </div>
+    <div class="form__field">
+      <input type="radio" class="form__radio" id="item-1" name="radio-selector">
+      <label for="item-1">Im a radio button</label> <br>
+      <input type="radio" class="form__radio" id="item-2" name="radio-selector">
+      <label for="item-2">Im a radio button</label>
+    </div>
+    <div class="form__field">
+        <input type="checkbox" class="form__checkbox" id="test1" />
+        <label for="test1">Red</label> <br><br>
+        <input type="checkbox" class="form__checkbox" id="test2" checked="checked" />
+        <label for="test2">Yellow</label>
+    </div>
+  </form>
+
+    <button class="btn btn-default">Take this action</button>
+    <button class="btn btn-primary">Take this action</button>  
+    <button class="btn btn-secondary">Take this action</button>
+</body>
+</html>
