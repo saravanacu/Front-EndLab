@@ -413,12 +413,12 @@ body {
   color: #F44336; }
 
 .form__radio {
-  visibility: hidden; }
+  visibility: hidden;
+  margin-bottom: 10px; }
   .form__radio + label {
     display: inline-block;
     position: relative;
-    height: 20px;
-    width: 20px; }
+    padding-left: 30px; }
     .form__radio + label:before {
       content: "";
       height: 20px;
