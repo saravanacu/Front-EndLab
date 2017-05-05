@@ -374,7 +374,7 @@ body {
   font-family: "Libra franklin", Arial, Sans-serif;
   font-size: 0.58333; }
 
-.input-control {
+.form__input {
   font-size: 14px;
   line-height: 1.42857143;
   box-sizing: border-box;
@@ -386,40 +386,40 @@ body {
   border: 1px solid #4E4A70;
   border-radius: 4px;
   padding: 10px 16px; }
-  .input-control::-webkit-input-placeholder {
+  .form__input::-webkit-input-placeholder {
     color: rgba(51, 51, 51, 0.65); }
-  .input-control::-moz-placeholder {
+  .form__input::-moz-placeholder {
     color: rgba(51, 51, 51, 0.65); }
-  .input-control:-moz-placeholder {
+  .form__input:-moz-placeholder {
     color: rgba(51, 51, 51, 0.65); }
-  .input-control:-ms-input-placeholder {
+  .form__input:-ms-input-placeholder {
     color: rgba(51, 51, 51, 0.65); }
-  .input-control:focus {
+  .form__input:focus {
     border: 1px solid #6255FF; }
 
-.input-label {
+.form__label {
   color: rgba(51, 51, 51, 0.65);
   font-style: 14px;
   line-height: 1.4; }
 
-.form-field p {
+.form__field p {
   color: rgba(51, 51, 51, 0.65);
   font-style: 13px;
   line-height: 1.4; }
-.form-field.error .input-control {
+.form__field.is-error .form__input {
   border: 1px solid #F44336;
   background: rgba(212, 173, 170, 0.54); }
-.form-field.error .input-label {
+.form__field.is-error .form__label {
   color: #F44336; }
 
-.input-radio {
+.form__radio {
   visibility: hidden; }
-  .input-radio + label {
+  .form__radio + label {
     display: inline-block;
     position: relative;
     height: 20px;
     width: 20px; }
-    .input-radio + label:before {
+    .form__radio + label:before {
       content: "";
       height: 20px;
       width: 20px;
@@ -438,11 +438,11 @@ body {
       -webkit-transition-timing-function: linear;
       -moz-transition-timing-function: linear;
       transition-timing-function: linear; }
-  .input-radio:checked + label:before {
+  .form__radio:checked + label:before {
     background: url(../images/icons/icon-radio-selected.png); }
-  .input-radio:checked:hover + label:before {
+  .form__radio:checked:hover + label:before {
     background: url(../images/icons/icon-radio-selected.png); }
-  .input-radio:hover + label:before {
+  .form__radio:hover + label:before {
     background: url(../images/icons/icon-radio-hover.png); }
 
 .input-checkbox {
@@ -478,6 +478,40 @@ body {
   .input-checkbox:hover + label:before {
     background: url(../images/icons/icon-check-hover.png); }
 
+.form__checkbox:not(:checked), .form__checkbox:checked {
+  display: none; }
+  .form__checkbox:not(:checked) + label, .form__checkbox:checked + label {
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer; }
+    .form__checkbox:not(:checked) + label:before, .form__checkbox:checked + label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: url(../images/icons/icon-unchecked.png) no-repeat center center; }
+    .form__checkbox:not(:checked) + label:after, .form__checkbox:checked + label:after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 0;
+      background: url(../images/icons/icon-checked.png) no-repeat center center;
+      transition: all .2s; }
+.form__checkbox:checked + label:after {
+  opacity: 1;
+  transform: scale(1); }
+.form__checkbox:checked + label:hover:before {
+  background: url(../images/icons/icon-checked.png); }
+.form__checkbox:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0); }
+.form__checkbox:not(:checked) + label:hover:before {
+  background: url(../images/icons/icon-check-hover.png); }
+
 button, input[type="button"], input[type="reset"], input[type="submit"] {
   font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
   border: 0;
@@ -486,8 +520,11 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   -ms-border-radius: 5px;
   border-radius: 5px;
   min-width: 160px;
-  line-height: 40px;
-  text-align: center; }
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all .2s ease-in-out; }
 
 .btn-default {
   background-color: #6255FF;

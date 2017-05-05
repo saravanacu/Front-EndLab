@@ -11,7 +11,7 @@ $input-error-bg-color:rgba(212,173,170,.54);
 $label-color:rgba(51,51,51,0.65);
 $label-error-color: #F44336;
 
-.input-control {
+.form__input {
   font-size: 14px;
   line-height: 1.42857143;
   box-sizing: border-box;
@@ -30,28 +30,29 @@ $label-error-color: #F44336;
     border:1px solid $input-focus-color;
   }
 }
-.input-label {
+.form__label {
   color: $label-color;
   font-style: 14px;
   line-height: 1.4;
 }
-.form-field {
+.form__field {
   p {
     color: $label-color;
     font-style: 13px;
     line-height: 1.4;
   }
-  &.error {
-    .input-control {
+  &.is-error {
+    .form__input {
       border:1px solid $input-error-border-color;
       background: $input-error-bg-color;
     }
-    .input-label {
+    .form__label {
       color: $label-error-color;
     }
   }
 }
-.input-radio {
+
+.form__radio {
   visibility: hidden; 
   + label {
     display: inline-block;
@@ -129,5 +130,51 @@ $label-error-color: #F44336;
   }
 }
 
-
+.form__checkbox  {
+  &:not(:checked), &:checked {
+    display: none;
+    + label {
+      position: relative;
+      padding-left: 1.95em;
+      cursor: pointer;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0; 
+        top: 0;
+        width: 20px; 
+        height: 20px;
+        background:url(../images/icons/icon-unchecked.png) no-repeat center center;
+      }
+      &:after {
+        content:"";
+        position: absolute;
+        width: 20px; 
+        height: 20px;
+        left: 0;
+        top: 0;
+        background:url(../images/icons/icon-checked.png) no-repeat center center;
+        transition: all .2s;
+      }      
+    }
+  }
+  &:checked + label {
+    &:after {
+      opacity: 1;
+      transform: scale(1);      
+    }
+    &:hover:before { 
+      background: url(../images/icons/icon-checked.png);
+    }
+  }
+  &:not(:checked)+ label {
+    &:after {
+      opacity: 0;
+      transform: scale(0);
+    }
+    &:hover:before { 
+      background: url(../images/icons/icon-check-hover.png);
+    }
+  }
+}
 // form styles ends here
