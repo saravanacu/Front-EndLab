@@ -1,13 +1,12 @@
 // Color Definitions:
 $color-primary: #7E57C2;
-$color-text: #333333; 
+$color-text: #333333;
 $color-bg: #FF0000;
 
 //Typography
 $base-font-size: 14px/24px;
-$base-font-family: 'Libra franklin', Arial, Sans-serif; 
 
-//Mixins 
+//Mixins
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -15,9 +14,15 @@ $base-font-family: 'Libra franklin', Arial, Sans-serif;
   -ms-border-radius: $radius;
   border-radius: $radius;
 }
-
 body {
   font-family:  $base-font-family;
   font-size:    $base-font-size;
+  background-color: $color-bg;
+  color: $color-text;
 }
-
+p {
+  @include primary-regular;
+}
+h1,h2,h3,h4,h5,h6 {
+  @include primary-bold;
+}
