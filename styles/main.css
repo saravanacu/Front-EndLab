@@ -370,10 +370,70 @@ template {
   display: none; }
 
 /* all fonts related to the application need to be added in this scss file*/
+@font-face {
+  font-family: "primary-regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/opensans-regular.eot?#iefix") format("embedded-opentype"), url("fonts/opensans-regular.woff2") format("woff2"), url("fonts/opensans-regular.woff") format("woff"), url("fonts/opensans-regular.ttf") format("truetype"), url("fonts/opensans-regular.svg#primary-regular") format("svg"); }
+@font-face {
+  font-family: "primary-light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/opensans-light.eot?#iefix") format("embedded-opentype"), url("fonts/opensans-light.woff2") format("woff2"), url("fonts/opensans-light.woff") format("woff"), url("fonts/opensans-light.ttf") format("truetype"), url("fonts/opensans-light.svg#primary-light") format("svg"); }
+@font-face {
+  font-family: "primary-bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/opensans-bold.eot?#iefix") format("embedded-opentype"), url("fonts/opensans-bold.woff2") format("woff2"), url("fonts/opensans-bold.woff") format("woff"), url("fonts/opensans-bold.ttf") format("truetype"), url("fonts/opensans-bold.svg#primary-bold") format("svg"); }
+*,
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 body {
-  background-color: #FF0000;
+  background-color: #FFFFFF;
+  color: #333333;
   font-family: "Libra franklin", Arial, Sans-serif;
-  font-size: 9.33333px; }
+  font-size: 0.58333; }
+
+p {
+  font-family: "primary-regular", arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'primary-bold', arial, sans-serif; }
+
+h1 {
+  font-size: 2.9375em;
+  line-height: 3em; }
+
+h2 {
+  font-size: 1.8125em;
+  line-height: 2em; }
+
+h3 {
+  font-size: 1.3125em;
+  line-height: 1.5em; }
+
+h4 {
+  font-size: 1.125em;
+  line-height: 1.5em; }
+
+h5 {
+  font-size: 1em;
+  line-height: 1.5em; }
+
+h6 {
+  font-size: 0.875em;
+  line-height: 1.5em; }
+
+p {
+  font-size: 1em;
+  line-height: 1.5em; }
+
+blockquote {
+  font-family: "primary-light", arial, sans-serif; }
 
 button, input[type="button"], input[type="reset"], input[type="submit"] {
   font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
@@ -405,15 +465,16 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     background-color: #f0f0f0; }
 
 .card {
-  background-color: #fff;
+  background-color: #FFFFFF;
   height: 376px;
+  padding: 15px;
   width: 260px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   border-radius: 8px;
   border-style: solid;
-  border-color: #eee;
+  border-color: #EEEEEE;
   border-width: 1px; }
 
 /*# sourceMappingURL=main.css.map */

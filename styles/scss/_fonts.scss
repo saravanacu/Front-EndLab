@@ -1,1 +1,16 @@
 /* all fonts related to the application need to be added in this scss file*/
+
+@include font-face("primary-regular", "fonts/opensans-regular");
+@include font-face("primary-light", "fonts/opensans-light");
+@include font-face("primary-bold", "fonts/opensans-bold");
+
+@mixin primary-regular {
+  font-family: "primary-regular", arial, sans-serif;
+}
+@mixin primary-light {
+  font-family: "primary-light", arial, sans-serif;
+}
+@mixin primary-bold {
+  font-family: 'primary-bold', arial, sans-serif;
+}
+

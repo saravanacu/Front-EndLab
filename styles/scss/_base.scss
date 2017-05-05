@@ -1,13 +1,17 @@
 // Color Definitions:
 $color-primary: #7E57C2;
-$color-text: #333333; 
-$color-bg: #FF0000;
+$color-text: #333333;
+$color-bg: #FFFFFF;
 
 //Typography
 $base-font-size: 14px/1.5;
 $base-font-family: 'Libra franklin', Arial, Sans-serif; 
 
 //Custom Mixins 
+$base-font-size: 14px/24px;
+
+//Mixins
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
@@ -15,8 +19,23 @@ $base-font-family: 'Libra franklin', Arial, Sans-serif;
   border-radius: $radius;
 }
 
+*,
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
   background-color: $color-bg;
-  font-family:  $base-font-family;
-  font-size:    $base-font-size;
+  color: $color-text;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+p {
+  @include primary-regular;
+}
+h1,h2,h3,h4,h5,h6 {
+  @include primary-bold;
 }
