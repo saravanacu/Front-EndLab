@@ -370,10 +370,200 @@ template {
   display: none; }
 
 /* all fonts related to the application need to be added in this scss file*/
+@font-face {
+  font-family: "primary-regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/opensans-regular.eot?#iefix") format("embedded-opentype"), url("fonts/opensans-regular.woff2") format("woff2"), url("fonts/opensans-regular.woff") format("woff"), url("fonts/opensans-regular.ttf") format("truetype"), url("fonts/opensans-regular.svg#primary-regular") format("svg"); }
+@font-face {
+  font-family: "primary-light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/opensans-light.eot?#iefix") format("embedded-opentype"), url("fonts/opensans-light.woff2") format("woff2"), url("fonts/opensans-light.woff") format("woff"), url("fonts/opensans-light.ttf") format("truetype"), url("fonts/opensans-light.svg#primary-light") format("svg"); }
+@font-face {
+  font-family: "primary-bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/opensans-bold.eot?#iefix") format("embedded-opentype"), url("fonts/opensans-bold.woff2") format("woff2"), url("fonts/opensans-bold.woff") format("woff"), url("fonts/opensans-bold.ttf") format("truetype"), url("fonts/opensans-bold.svg#primary-bold") format("svg"); }
 body {
-  background-color: #FF0000;
-  font-family: "Libra franklin", Arial, Sans-serif;
-  font-size: 0.58333; }
+  font-size: 0.58333;
+  background-color: #FFFFFF;
+  color: #333333; }
+
+p {
+  font-family: "primary-regular", arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'primary-bold', arial, sans-serif; }
+
+h1 {
+  font-size: 2.9375em;
+  line-height: 3em; }
+
+h2 {
+  font-size: 1.8125em;
+  line-height: 2em; }
+
+h3 {
+  font-size: 1.3125em;
+  line-height: 1.5em; }
+
+h4 {
+  font-size: 1.125em;
+  line-height: 1.5em; }
+
+h5 {
+  font-size: 1em;
+  line-height: 1.5em; }
+
+h6 {
+  font-size: 0.875em;
+  line-height: 1.5em; }
+
+p {
+  font-size: 1em;
+  line-height: 1.5em; }
+
+blockquote {
+  font-family: "primary-light", arial, sans-serif; }
+
+.form__input {
+  font-size: 14px;
+  line-height: 1.42857143;
+  box-sizing: border-box;
+  display: inline-block;
+  outline: 0;
+  height: 40px;
+  width: 260px;
+  color: #333333;
+  border: 1px solid #4E4A70;
+  border-radius: 4px;
+  padding: 10px 16px; }
+  .form__input::-webkit-input-placeholder {
+    color: rgba(51, 51, 51, 0.65); }
+  .form__input::-moz-placeholder {
+    color: rgba(51, 51, 51, 0.65); }
+  .form__input:-moz-placeholder {
+    color: rgba(51, 51, 51, 0.65); }
+  .form__input:-ms-input-placeholder {
+    color: rgba(51, 51, 51, 0.65); }
+  .form__input:focus {
+    border: 1px solid #6255FF; }
+
+.form__label {
+  color: rgba(51, 51, 51, 0.65);
+  font-style: 14px;
+  line-height: 1.4; }
+
+.form__field p {
+  color: rgba(51, 51, 51, 0.65);
+  font-style: 13px;
+  line-height: 1.4; }
+.form__field.is-error .form__input {
+  border: 1px solid #F44336;
+  background: rgba(212, 173, 170, 0.54); }
+.form__field.is-error .form__label {
+  color: #F44336; }
+
+.form__radio {
+  visibility: hidden;
+  margin-bottom: 10px; }
+  .form__radio + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px; }
+    .form__radio + label:before {
+      content: "";
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: url(../images/icons/icon-radio.png) no-repeat center center;
+      -webkit-transition-property: background;
+      -moz-transition-property: background;
+      transition-property: background;
+      -webkit-transition-duration: 0.25s;
+      -moz-transition-duration: 0.25s;
+      transition-duration: 0.25s;
+      -webkit-transition-timing-function: linear;
+      -moz-transition-timing-function: linear;
+      transition-timing-function: linear; }
+  .form__radio:checked + label:before {
+    background: url(../images/icons/icon-radio-selected.png); }
+  .form__radio:checked:hover + label:before {
+    background: url(../images/icons/icon-radio-selected.png); }
+  .form__radio:hover + label:before {
+    background: url(../images/icons/icon-radio-hover.png); }
+
+.input-checkbox {
+  visibility: hidden; }
+  .input-checkbox + label {
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    width: 20px; }
+    .input-checkbox + label:before {
+      content: "";
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: url(../images/icons/icon-unchecked.png) no-repeat center center;
+      -webkit-transition-property: background;
+      -moz-transition-property: background;
+      transition-property: background;
+      -webkit-transition-duration: 0.25s;
+      -moz-transition-duration: 0.25s;
+      transition-duration: 0.25s;
+      -webkit-transition-timing-function: linear;
+      -moz-transition-timing-function: linear;
+      transition-timing-function: linear; }
+  .input-checkbox:checked + label:before {
+    background: url(../images/icons/icon-icon-checked.png); }
+  .input-checkbox:checked:hover + label:before {
+    background: url(../images/icons/icon-icon-checked.png); }
+  .input-checkbox:hover + label:before {
+    background: url(../images/icons/icon-check-hover.png); }
+
+.form__checkbox:not(:checked), .form__checkbox:checked {
+  display: none; }
+  .form__checkbox:not(:checked) + label, .form__checkbox:checked + label {
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer; }
+    .form__checkbox:not(:checked) + label:before, .form__checkbox:checked + label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: url(../images/icons/icon-unchecked.png) no-repeat center center; }
+    .form__checkbox:not(:checked) + label:after, .form__checkbox:checked + label:after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 0;
+      background: url(../images/icons/icon-checked.png) no-repeat center center;
+      transition: all .2s; }
+.form__checkbox:checked + label:after {
+  opacity: 1;
+  transform: scale(1); }
+.form__checkbox:checked + label:hover:before {
+  background: url(../images/icons/icon-checked.png); }
+.form__checkbox:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0); }
+.form__checkbox:not(:checked) + label:hover:before {
+  background: url(../images/icons/icon-check-hover.png); }
 
 button, input[type="button"], input[type="reset"], input[type="submit"] {
   font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
@@ -383,8 +573,11 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   -ms-border-radius: 5px;
   border-radius: 5px;
   min-width: 160px;
-  line-height: 40px;
-  text-align: center; }
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all .2s ease-in-out; }
 
 .btn-default {
   background-color: #6255FF;

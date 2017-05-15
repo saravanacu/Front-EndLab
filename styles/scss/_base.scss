@@ -1,7 +1,7 @@
 // Color Definitions:
 $color-primary: #7E57C2;
 $color-text: #333333;
-$color-bg: #FF0000;
+$color-bg: #FFFFFF;
 
 //Typography
 $base-font-size: 14px/24px;
@@ -15,9 +15,10 @@ $base-font-size: 14px/24px;
   border-radius: $radius;
 }
 body {
+  // font-family:$base-font-family;
+  font-size: $base-font-size;
   background-color: $color-bg;
   color: $color-text;
-  font-size: $base-font-size;
 }
 p {
   @include primary-regular;
